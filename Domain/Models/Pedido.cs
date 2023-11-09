@@ -16,9 +16,10 @@ namespace Domain.Models
         public int VendedorId { get; set; }
         public int RepartidorId { get; set; }
         public int EstadoId { get; set; }
+        public int UsuarioId { get; set; }
 
-        public Usuario Usuario { get; set; }
-        public Estado Estado { get; set; }
+        public virtual Usuario Usuario { get; set; }
+        public virtual Estado Estado { get; set; }
         public List<PedidoDetalle> ListPedidoDetalle { get; set; }
 
     }

@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 namespace Infrastructure.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class Initial_v2 : Migration
+    public partial class Initial_v4 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -65,8 +65,9 @@ namespace Infrastructure.Persistence.Migrations
                     Nombre = table.Column<string>(type: "varchar(100)", nullable: false),
                     Correo = table.Column<string>(type: "varchar(100)", nullable: false),
                     Telefono = table.Column<string>(type: "varchar(20)", nullable: false),
-                    Puesto = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    RolId = table.Column<int>(type: "int", nullable: false)
+                    Puesto = table.Column<string>(type: "varchar(20)", nullable: false),
+                    RolId = table.Column<int>(type: "int", nullable: false),
+                    Password = table.Column<string>(type: "varchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {

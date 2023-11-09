@@ -19,7 +19,7 @@ namespace Utils
             string issuer = config["Jwt:Issuer"]!;
             string audience = config["Jwt:Audience"]!;
 
-            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey!));
+            var securityKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
             var credentials = new SigningCredentials(securityKey, SecurityAlgorithms.HmacSha256);
 
             var claims = new[]

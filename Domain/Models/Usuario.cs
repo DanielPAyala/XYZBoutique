@@ -11,7 +11,6 @@ namespace Domain.Models
     public class Usuario
     {
         public int Id { get; set; }
-        [Required]
         [Column(TypeName = "varchar(20)")]
         public string Codigo { get; set; }
         [Column(TypeName = "varchar(100)")]
@@ -20,10 +19,13 @@ namespace Domain.Models
         public string Correo { get; set; }
         [Column(TypeName = "varchar(20)")]
         public string Telefono { get; set; }
+        [Column(TypeName = "varchar(20)")]
         public string Puesto { get; set; }
-        [Required]
         public int RolId { get; set; }
+        [Required]
+        [Column(TypeName = "varchar(50)")]
+        public string Password { get; set; }
 
-        public Rol Rol { get; set; }
+        public virtual Rol Rol { get; set; }
     }
 }
